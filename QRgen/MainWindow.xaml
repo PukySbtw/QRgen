@@ -1,0 +1,47 @@
+﻿<Window x:Class="QRgen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QRgen"
+        mc:Ignorable="d"
+        Title="Generátor QR kodů" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnPotvrzení" Content="Vytvořit QR" HorizontalAlignment="Left" Margin="36,78,0,0" VerticalAlignment="Top" Height="47" Width="162" RenderTransformOrigin="0.5,0.5" FontSize="20
+                " FontFamily="Consolas" Click="Button_Click" Foreground="#FF8E4242" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.173"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Image x:Name="obrazekQR" HorizontalAlignment="Left" Height="208" Margin="292,71,0,0" VerticalAlignment="Top" Width="316" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.049"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox x:Name="TextboxInput" HorizontalAlignment="Left" Margin="37,130,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="162" Foreground="White">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF245A96" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+
+    </Grid>
+</Window>
